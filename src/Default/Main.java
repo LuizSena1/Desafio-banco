@@ -3,25 +3,25 @@ package Default;
 public class Main {
     public static void main(String[] args) {
         Banco Bradesco = new Banco();
-        Cliente Generico = new Cliente();
-        Cliente Algum = new Cliente();
-        Cliente Qualquer = new Cliente();
-        Generico.setNome("Luiz");
-        Algum.setNome("Arthur");
-        Qualquer.setNome("Maria");
-        Conta ca = new ContaCorrente(Generico);
-        Conta pa = new ContaPoupanca(Algum);
-        Conta cc = new ContaCorrente(Qualquer);
-        Bradesco.AdicionarConta(ca);
-        Bradesco.AdicionarConta(pa);
-        Bradesco.AdicionarConta(cc);
-        ca.Extratos();
-        pa.Extratos();
-        cc.depositar(9302);
-        cc.Extratos();
-        cc.transferir(800,ca);
-        ca.Extratos();
-        cc.Extratos();
+        Cliente Luiz = new Cliente();
+        Cliente Arthur = new Cliente();
+        Cliente Maria = new Cliente();
+        Luiz.setNome("Luiz");
+        Arthur.setNome("Arthur");
+        Maria.setNome("Maria");
+        Conta CL = new ContaCorrente(Luiz);
+        Conta PA = new ContaPoupanca(Arthur);
+        Conta CM = new ContaCorrente(Maria);
+        Bradesco.AdicionarConta(CL);
+        Bradesco.AdicionarConta(PA);
+        Bradesco.AdicionarConta(CM);
+        CL.Extratos();
+        PA.Extratos();
+        CM.depositar(9302);
+        CM.Extratos();
+        CM.transferir(800, CL);
+        CL.Extratos();
+        CM.Extratos();
         Bradesco.ListarContas();
     }
 }
