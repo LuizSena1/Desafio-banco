@@ -3,15 +3,15 @@ package Default;
 public class Main {
     public static void main(String[] args) {
         Banco Bradesco = new Banco();
-        Cliente Luiz = new Cliente();
-        Cliente Sena = new Cliente();
-        Cliente Silva = new Cliente();
-        Luiz.setNome("Luiz");
-        Sena.setNome("Sena");
-        Silva.setNome("Silva");
-        Conta ca = new ContaCorrente(Luiz);
-        Conta pa = new ContaPoupanca(Sena);
-        Conta cc = new ContaCorrente(Silva);
+        Cliente Generico = new Cliente();
+        Cliente Algum = new Cliente();
+        Cliente Qualquer = new Cliente();
+        Generico.setNome("Luiz");
+        Algum.setNome("Arthur");
+        Qualquer.setNome("Maria");
+        Conta ca = new ContaCorrente(Generico);
+        Conta pa = new ContaPoupanca(Algum);
+        Conta cc = new ContaCorrente(Qualquer);
         Bradesco.AdicionarConta(ca);
         Bradesco.AdicionarConta(pa);
         Bradesco.AdicionarConta(cc);
