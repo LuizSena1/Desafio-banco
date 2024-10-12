@@ -10,12 +10,6 @@ public class ContaCorrente extends Conta {
         return "Conta Corrente";
     }
 
-
-    @Override
-    public int getID() {
-        return super.getID();
-    }
-
     @Override
     public void Extratos() {
         System.out.println("Extrato da Conta Corrente");

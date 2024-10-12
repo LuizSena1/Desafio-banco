@@ -34,10 +34,6 @@ public abstract class Conta implements IConta{
         return agencia;
     }
 
-    public int getID(){
-        return ID;
-    }
-
     @Override
     public void sacar(double Valor) {
         saldo -= Valor;
@@ -49,7 +45,7 @@ public abstract class Conta implements IConta{
     }
 
     @Override
-    public void transferir(double Valor, Conta contaDestino) {
+    public void transferir(double Valor,Conta contaDestino) {
         this.sacar(Valor);
         contaDestino.depositar(Valor);
     }
