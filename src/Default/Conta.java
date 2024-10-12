@@ -5,7 +5,7 @@ public abstract class Conta implements IConta{
     protected int agencia;
     protected int numero;
     protected double saldo;
-    private static final int DEFAUL_AGENCY = 001;
+    private static final int DEFAUL_AGENCY = 1;
     private Cliente Cliente;
 
 
@@ -56,8 +56,8 @@ public abstract class Conta implements IConta{
 
     protected void ImprimirInfo(){
         System.out.println("Titular : " + this.Cliente.getNome());
-        System.out.println(String.format("Agencia : %d",this.agencia));
-        System.out.println(String.format("Numero : %d",this.numero));
-        System.out.println(String.format("Saldo : %.2f",this.saldo));
+        System.out.printf("Agencia : %d%n",this.agencia);
+        System.out.printf("Numero : %d%n",this.numero);
+        System.out.printf("Saldo : %.2f%n",this.saldo);
     }
 }
