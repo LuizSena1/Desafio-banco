@@ -15,13 +15,14 @@ public class Main {
         Bradesco.AdicionarConta(CL);
         Bradesco.AdicionarConta(PA);
         Bradesco.AdicionarConta(CM);
-        CL.Extratos();
-        PA.Extratos();
+     //   CL.Extratos();
+    //   PA.Extratos();
+        PA.sacar(980);
         CM.depositar(9302);
-        CM.Extratos();
+    //    CM.Extratos();
         CM.transferir(800, CL);
-        CL.Extratos();
-        CM.Extratos();
+  //      CL.Extratos();
+  //       CM.Extratos();
         Bradesco.ListarContas();
     }
 }
