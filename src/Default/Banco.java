@@ -7,7 +7,6 @@ import java.util.List;
 import static java.util.EnumSet.range;
 
 public class Banco {
-    private String nome;
     private Conta Conta;
     private List<Conta> contas = new ArrayList<>();
 
@@ -23,10 +22,4 @@ public class Banco {
         }
     }
 
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 }
