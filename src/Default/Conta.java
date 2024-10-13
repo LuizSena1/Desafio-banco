@@ -50,8 +50,12 @@ public abstract class Conta implements IConta{
 
     @Override
     public void transferir(double Valor,Conta contaDestino) {
-        this.sacar(Valor);
-        contaDestino.depositar(Valor);
+        if(this.saldo >= Valor) {
+            this.sacar(Valor);
+            contaDestino.depositar(Valor);
+        }else{
+            System.out.println("Saldo Insuficiente para a Operação");
+        }
     }
 
     protected void ImprimirInfo(){
